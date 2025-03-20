@@ -1,7 +1,8 @@
-package main;
+package restaurant;
 import java.util.ArrayList;
 
-import restaurant.Restaurant;
+import people.Chef;
+import people.Visitor;
 
 public class Order {
 	private Chef chef;

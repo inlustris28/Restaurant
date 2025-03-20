@@ -1,11 +1,10 @@
 package restaurant;
 import java.util.ArrayList;
 
-import main.Chef;
-import main.Food;
-import main.Menu;
-import main.Order;
-import main.Visitor;
+import people.Chef;
+import people.Visitor;
+
+
 
 public class Restaurant {
 	private String name;

@@ -1,4 +1,4 @@
-package main;
+package restaurant;
 
 public class Food {
 	private String name;

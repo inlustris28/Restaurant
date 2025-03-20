@@ -1,4 +1,4 @@
-package main;
+package people;
 
 public class Visitor {
 	private String name;

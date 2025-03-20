@@ -1,4 +1,4 @@
-package main;
+package people;
 import java.util.ArrayList;
 
 public class Chef {
