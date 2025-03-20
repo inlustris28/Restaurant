@@ -27,11 +27,13 @@ public class Main {
 		
 		Menu dessert = new Menu("Dessert");
 		
-		dessert.add(new Food("Ice Cream"), 1000);
+		dessert.add(new Food("Ice Cream", 1000));
 		dessert.add(new Food("Es Pisang Ijo", 23000));
 		dessert.add(new Food("Jus Emas", 999000));
 		
 		restaurant.addMenu(dessert);
+		restaurant.addChef(chef1);
+		restaurant.addChef(chef2);
 		
 		restaurant.showMenu();
 		restaurant.showChef();
@@ -41,6 +43,7 @@ public class Main {
 		
 		restaurant.order(chef2, visitor2, "Udang Emas", 9);
 		restaurant.order(chef2, visitor2, "Ice Cream", 90);
+		
 		
 		visitor1.showTotalPrice();
 		visitor2.showTotalPrice();
