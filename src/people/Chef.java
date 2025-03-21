@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Chef {
 	private String name;
 	private ArrayList<String> listHistory = new ArrayList<String>();
-	
+	private int count = 0;
 	
 	public Chef(String name) {
 		this.name = name;
@@ -20,9 +20,12 @@ public class Chef {
 
 	public void showCookHistory() {
 		System.out.println();
+		
+		count = 1;
 		System.out.println("---- " + name + " COOK HISTORY ----");
 		for (String history : listHistory) {
-			System.out.println(" - " + history);
+			System.out.println(count + ". " + history);
+			count++;
 		}
 	}
 }

@@ -1,5 +1,4 @@
 package restaurant;
-import java.util.ArrayList;
 
 import people.Chef;
 import people.Visitor;

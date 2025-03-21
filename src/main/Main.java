@@ -3,6 +3,10 @@ package main;
 import restaurant.Restaurant;
 import restaurant.Food;
 import restaurant.Menu;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import people.Chef;
 import people.Visitor;
 
@@ -45,7 +49,6 @@ public class Main {
 		restaurant.order(chef2, visitor2, "Udang Emas", 9);
 		restaurant.order(chef2, visitor2, "Ice Cream", 90);
 		
-		
 		visitor1.showTotalPrice();
 		visitor2.showTotalPrice();
 		
@@ -54,4 +57,10 @@ public class Main {
 		
 		restaurant.showTotalIncome();
 	}
+	
+	// Helper method to format currency in IDR 
+    public static String formatIDR(int amount) { 
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("id", "ID")); 
+        return formatter.format(amount); 
+    }
 }

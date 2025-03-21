@@ -1,10 +1,9 @@
 package restaurant;
 import java.util.ArrayList;
 
+import main.Main;
 import people.Chef;
 import people.Visitor;
-
-
 
 public class Restaurant {
 	private String name;
@@ -12,6 +11,7 @@ public class Restaurant {
 	private ArrayList<Chef> listChef = new ArrayList<Chef>();
 	private ArrayList<Order> listOrder = new ArrayList<Order>();
 	private int totalIncome = 0;
+	private int count = 0;
 	
 	public Restaurant(String name) {
 		this.name = name;
@@ -44,31 +44,41 @@ public class Restaurant {
 	}
 	
 	public void showMenu() {
-		System.out.println("---- MENU ----");
+		System.out.println("Welcome to the Restaurant!");
+		System.out.println();
+		
+		System.out.println("+-----------------------------+");
+		System.out.println("|             MENU            |");
+		System.out.println("+-----------------------------+");
 		
 		for (Menu menu : listMenu) {
-			System.out.println("- " + menu.getTypeMenu());
+			System.out.println(menu.getTypeMenu());
 			for (Food food : menu.getListFood()) {
-				System.out.println("  " + food.getName() + ": " + food.getPrice());
+				System.out.println("  " + food.getName() + "\t: " + Main.formatIDR(food.getPrice()));
 			}
 			System.out.println();
 		}
-		
-		System.out.println();
 	}
 	
 	public void showChef() {
-		System.out.println("---- CHEF ----");
+		System.out.println("+-----------------------------+");
+		System.out.println("|             CHEF            |");
+		System.out.println("+-----------------------------+");
 		
+		count = 1;
 		for (Chef chef : listChef) {
-			System.out.println("- Chef " + chef.getName());
+			System.out.println(" " + count + ".Chef " + chef.getName());
+			count++;
 		}
+		System.out.println();		
 	}
 
 	public void showTotalIncome() {
 		System.out.println();
-		System.out.println("---- TOTAL INCOME ----");
-		System.out.println(totalIncome);
+		System.out.println("+-----------------------------+");
+		System.out.println("|   RESTAURANT TOTAL INCOME   |");
+		System.out.println("+-----------------------------+");
+		System.out.println(" " + Main.formatIDR(totalIncome));
 	}
 
 	
